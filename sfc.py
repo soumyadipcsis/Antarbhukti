@@ -210,7 +210,7 @@ if __name__ == "__main__":
     
     try:
         # Extract data from file
-        sfc.load("dec2hex.txt")
+        sfc.load("dec2hex.txt") # Replace with your source filename
         steps = sfc.get_steps()
         transitions = sfc.get_transitions()
         # Display the results
