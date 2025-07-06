@@ -23,7 +23,7 @@ AntarBhukti is a verification tool for evolving software, designed to verify cha
 - `sfc.py`  
 - `sfc_verifier.py`
 - `genreport.py`
-- `setup.py`
+- `iec61131.py`
 
 ### Prerequisites
 
@@ -33,13 +33,19 @@ AntarBhukti is a verification tool for evolving software, designed to verify cha
 ### Usage
 
 ```sh
-python3 driver.py <source_SFC.txt> <upgraded_SFC.txt>
+python3 driver.py <SFC-source.txt> <SFC-upgrade.txt>
 ```
-- `<source_SFC.txt>`: Path to the source SFC file.
-- `<upgraded_SFC.txt>`: Path to the upgraded (evolved) SFC file.
+- `<SFC-source.txt>`: Path to the source SFC file.
+- `<SFC-upgrade.txt>`: Path to the upgraded (evolved) SFC file.
 
 ### Example
-
+For other examples if the file name of souce and upgraded SFC are different then the user need to change the following lines using the user wanted file name.
+```sh
+For driver.py line no 47 and 48
+    sfc1.load("SFC-source.txt") #filename-1
+    sfc2.load("SFC-upgrade.txt") #filename-2
+For sfc.py line no 213
+     sfc.load("SFC-source.txt")#filename-1
 ```sh
 python3 driver.py sfc_old.txt sfc_new.txt
 ```
