@@ -9,13 +9,14 @@
 - **SFC Comparison:** Accurately verifies software evolution using textual SFC representations.
 - **Simple CLI:** Intuitive command-line interface for quick verification tasks.
 - **Comprehensive Benchmarks:** Tested on all 80 OSCAT benchmark applications.<br>
-  - `Benchmrak-Source-OSCAT.py`: Contains the source/original SFCs.
+  - `Benchmrak-Source-OSCAT.txt`: Contains 50 source/original SFCs.
     - ⚠️ **Input Formatting Required:**
       - Replace `"steps":` with `steps=`
       - Replace `"transitions":` with `transitions=`
       - Replace `"variables":` with `variables=`
       - Add: `initial_step="Init"`
-  - `Benchmarks-Upgrade-OSCAT.py`: Contains the upgraded/target SFCs.
+  - `Benchmarks-Upgrade-OSCAT.txt`: Contains 50 upgraded/target SFCs.
+    - Same formatting as `Benchmrak-Source-OSCAT.txt`.
 - **Superior Performance:** Outperforms [verifaps](https://formal.kastel.kit.edu/~weigl/verifaps/index.html) in coverage and flexibility.
 - **Open ST Reference:** Structured Text (ST) code for the OSCAT library is available at [www.oscat.de](https://www.oscat.de).
 
@@ -82,7 +83,7 @@ AntarBhukti has been thoroughly tested on all 80 OSCAT automation benchmarks, en
 
 ## 📚 Reference
 
-- For Structured Text (ST) code for the OSCAT library, check [OSCCAT](https://www.oscat.de)
+- For Structured Text (ST) code for the OSCAT library, check [www.oscat.de](https://www.oscat.de)
 
 ---
 
