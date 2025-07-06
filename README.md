@@ -1,14 +1,14 @@
 # AntarBhukti
 
-**AntarBhukti** is a robust verification tool for evolving software, designed to analyze changes between two versions of Sequential Function Charts (SFCs)—a source and a target. It is purpose-built for use with OSCAT application benchmarks.
+**AntarBhukti** is a powerful verification tool for evolving software, designed to analyze changes between two versions of Sequential Function Charts (SFCs)—a source and a target. Purpose-built for OSCAT application benchmarks, AntarBhukti enables accurate, reliable, and efficient verification for automation engineers and researchers.
 
 ---
 
 ## 🚀 Features
 
-- **SFC Comparison:** Accurately verifies software evolution using textual SFC representations.
-- **Simple CLI:** Intuitive command-line interface for quick verification tasks.
-- **Comprehensive Benchmarks:** Tested on all 80 OSCAT benchmark applications.<br>
+- **SFC Comparison:** Precisely verifies the evolution of software using textual SFC representations.
+- **User-Friendly CLI:** Intuitive command-line interface for seamless and rapid verification tasks.
+- **Comprehensive Benchmarks:** Extensively tested on all 80 OSCAT benchmark applications.
   - `Benchmrak-Source-OSCAT.txt`: Contains 50 source/original SFCs.
     - ⚠️ **Input Formatting Required:**
       - Replace `"steps":` with `steps=`
@@ -16,15 +16,16 @@
       - Replace `"variables":` with `variables=`
       - Add: `initial_step="Init"`
   - `Benchmarks-Upgrade-OSCAT.txt`: Contains 50 upgraded/target SFCs.
-    - Same formatting as `Benchmrak-Source-OSCAT.txt`.
-- **Superior Performance:** Outperforms [verifaps](https://formal.kastel.kit.edu/~weigl/verifaps/index.html) in coverage and flexibility.
+    - *Use the same formatting as `Benchmrak-Source-OSCAT.txt`.*
+- **Superior Performance:** Outperforms [verifaps](https://formal.kastel.kit.edu/~weigl/verifaps/index.html) in both coverage and flexibility.
 - **Open ST Reference:** Structured Text (ST) code for the OSCAT library is available at [www.oscat.de](https://www.oscat.de).
+- **Clear Results:** Output is stored in an HTML file for better visualization and understanding.
 
 ---
 
 ## 🧑‍💻 Getting Started
 
-### Dependency Files
+### Required Files
 
 - `driver.py`
 - `sfc.py`
@@ -44,6 +45,7 @@
 ```sh
 python3 driver.py <SFC-source.txt> <SFC-upgrade.txt>
 ```
+
 - `<SFC-source.txt>`: Path to the source SFC file.
 - `<SFC-upgrade.txt>`: Path to the upgraded (evolved) SFC file.
 
@@ -68,7 +70,7 @@ python3 driver.py <your_filename_source>.txt <your_filename_upgrade>.txt
 ```
 
 **Current version example:**  
-Run the tool on DEC to HEX converter:
+Run the tool on a DEC to HEX converter:
 ```sh
 python3 driver.py dec2hex.txt dec2hex_mod.txt
 ```
@@ -83,7 +85,7 @@ AntarBhukti has been thoroughly tested on all 80 OSCAT automation benchmarks, en
 
 ## 📚 Reference
 
-- For Structured Text (ST) code for the OSCAT library, check [www.oscat.de](https://www.oscat.de)
+- For Structured Text (ST) code for the OSCAT library, visit [www.oscat.de](https://www.oscat.de)
 
 ---
 
