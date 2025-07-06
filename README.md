@@ -1,23 +1,23 @@
 # AntarBhukti
 
-**AntarBhukti** is a verification tool for evolving software, designed to verify changes between two versions of SFCs (Sequential Function Charts)—a source and a target. It is specifically tailored for use with OSCAT application benchmarks.
+**AntarBhukti** is a robust verification tool for evolving software, designed to analyze changes between two versions of Sequential Function Charts (SFCs)—a source and a target. It is purpose-built for use with OSCAT application benchmarks.
 
 ---
 
 ## 🚀 Features
 
-- **SFC Comparison:** Verifies correctness of software evolution using textual SFC representations.
-- **Simple CLI:** Easy-to-use command-line interface for fast verification tasks.
-- **Comprehensive Benchmarks:** Tested on all 80 OSCAT benchmark applications.
-  - `Benchmrak-Source-OSCAT.py` contains the source/original SFCs.
-    - ⚠️ *Input Formatting Required:*  
+- **SFC Comparison:** Accurately verifies software evolution using textual SFC representations.
+- **Simple CLI:** Intuitive command-line interface for quick verification tasks.
+- **Comprehensive Benchmarks:** Tested on all 80 OSCAT benchmark applications.<br>
+  - `Benchmrak-Source-OSCAT.py`: Contains the source/original SFCs.
+    - ⚠️ **Input Formatting Required:**
       - Replace `"steps":` with `steps=`
       - Replace `"transitions":` with `transitions=`
       - Replace `"variables":` with `variables=`
       - Add: `initial_step="Init"`
-  - `Benchmarks-Upgrade-OSCAT.py` contains the upgraded/target SFCs.
+  - `Benchmarks-Upgrade-OSCAT.py`: Contains the upgraded/target SFCs.
 - **Superior Performance:** Outperforms [verifaps](https://formal.kastel.kit.edu/~weigl/verifaps/index.html) in coverage and flexibility.
-- **Open ST Reference:** Reference Structured Text (ST) code for the OSCAT library is available in the [SamaTulyata4PLC](https://github.com/soumyadipcsis/SamaTulyata4PLC) repository.
+- **Open ST Reference:** Structured Text (ST) code for the OSCAT library is available at [www.oscat.de](https://www.oscat.de).
 
 ---
 
@@ -25,8 +25,8 @@
 
 ### Dependency Files
 
-- `driver.py`  
-- `sfc.py`  
+- `driver.py`
+- `sfc.py`
 - `sfc_verifier.py`
 - `genreport.py`
 - `iec61131.py`
@@ -43,7 +43,6 @@
 ```sh
 python3 driver.py <SFC-source.txt> <SFC-upgrade.txt>
 ```
-
 - `<SFC-source.txt>`: Path to the source SFC file.
 - `<SFC-upgrade.txt>`: Path to the upgraded (evolved) SFC file.
 
@@ -51,7 +50,7 @@ python3 driver.py <SFC-source.txt> <SFC-upgrade.txt>
 
 ### Example
 
-> If your source and upgraded SFC files have different names, update the following lines accordingly:
+> **Note:** If your source and upgraded SFC files have different names, update the following lines in the code:
 
 **In `driver.py` (lines 47 and 48):**
 ```python
@@ -64,20 +63,26 @@ sfc.load("SFC-source.txt")   # Replace with your source filename
 ```
 **Then run:**
 ```sh
-python3 driver.py sfc_old.txt sfc_new.txt
+python3 driver.py <your_filename_source>.txt <your_filename_upgrade>.txt
+```
+
+**Current version example:**  
+Run the tool on DEC to HEX converter:
+```sh
+python3 driver.py dec2hex.txt dec2hex_mod.txt
 ```
 
 ---
 
 ## 🏗️ OSCAT Benchmarks
 
-AntarBhukti has been tested on all 80 OSCAT automation benchmarks for robust and reliable verification.
+AntarBhukti has been thoroughly tested on all 80 OSCAT automation benchmarks, ensuring robust and reliable verification.
 
 ---
 
 ## 📚 Reference
 
-- For Structured Text (ST) code for the OSCAT library, see the [SamaTulyata4PLC](https://github.com/soumyadipcsis/SamaTulyata4PLC) repository.
+- For Structured Text (ST) code for the OSCAT library, check [OSCCAT](https://www.oscat.de)
 
 ---
 
