@@ -9,7 +9,14 @@ AntarBhukti is a verification tool for evolving software, designed to verify cha
 - **Compare SFCs:** Verifies the correctness of software evolution using textual SFC representations.
 - **Easy to Use:** Simple command line interface for fast verification tasks.
 - **Benchmark Suite:** Works on all 80 OSCAT benchmark applications.  
-  - `Benchmrak-Source-OSCAT.py` contains the source/original SFCs.  
+  - `Benchmrak-Source-OSCAT.py` contains the source/original SFCs.
+  -  Need some modification while giving the input to the tool
+  -  ```sh
+     "steps": -> steps=
+     "transitions": -> transitions=
+     "variables": -> variables=
+     Finally add this: initial_step="Init"
+     ``` 
   - `Benchmarks-Upgrade-OSCAT.py` contains the upgraded/target SFCs.
 - **Superior Performance:** Outperforms [verifaps](https://formal.kastel.kit.edu/~weigl/verifaps/index.html) in coverage and flexibility.
 - **Open ST Reference:** Reference ST code for the OSCAT library is available in the [SamaTulyata4PLC](https://github.com/soumyadipcsis/SamaTulyata4PLC) repository.
