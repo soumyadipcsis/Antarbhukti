@@ -44,8 +44,8 @@ def main():
     # Load SFC models
     sfc1 = SFC()
     sfc2 = SFC()
-    sfc1.load("dec2hex.txt")
-    sfc2.load("dec2hex_mod.txt")
+    sfc1.load("dec2hex.txt") # Replace with your source filename
+    sfc2.load("dec2hex_mod.txt")  # Replace with your upgrade filename
     
     # Convert SFC models to Petri nets
     pn1 = sfc1.to_pn()
