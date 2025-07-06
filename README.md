@@ -85,7 +85,8 @@ AntarBhukti has been thoroughly tested on all 80 OSCAT automation benchmarks, en
 
 ## 📚 Reference
 
-- For Structured Text (ST) code for the OSCAT library, visit [www.oscat.de](https://www.oscat.de)
+- For Structured Text (ST) code for the OSCAT library, visit [OSCAT](https://www.oscat.de).
+- We compare the performance of our approach against [verifAPS](https://github.com/VerifAPS/), a state-of-the-art verification tool.
 
 ---
 
