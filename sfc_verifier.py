@@ -190,16 +190,27 @@ class Verifier:
             )
             return z3_condition, z3_data_transform
         def dfs(current_place, current_path, visited, start_cut):
+            # if len(current_path) > 0 and current_place in cutpoint_set:
+            #     if current_place != start_cut:
+            #         cond, subst = compute_condition_and_subst(current_path)
+            #         paths.append({
+            #             "from": start_cut,
+            #             "to": current_place,
+            #             "transitions": list(current_path),
+            #             "cond": cond,
+            #             "subst": subst
+            #         })
+            #     return
             if len(current_path) > 0 and current_place in cutpoint_set:
-                if current_place != start_cut:
-                    cond, subst = compute_condition_and_subst(current_path)
-                    paths.append({
-                        "from": start_cut,
-                        "to": current_place,
-                        "transitions": list(current_path),
-                        "cond": cond,
-                        "subst": subst
-                    })
+    # Record all cutpoint-to-cutpoint paths, including self-loops
+                cond, subst = compute_condition_and_subst(current_path)
+                paths.append({
+                    "from": start_cut,
+                    "to": current_place,
+                    "transitions": list(current_path),
+                    "cond": cond,
+                    "subst": subst
+                })
                 return
             for t in out_transitions.get(current_place, []):
                 for p2 in trans_to_places[t]:
