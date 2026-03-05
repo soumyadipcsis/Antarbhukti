@@ -1,0 +1,5 @@
+networkx
+lxml
+z3-solver
+graphviz
+numpy
