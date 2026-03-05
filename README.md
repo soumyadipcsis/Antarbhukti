@@ -92,7 +92,6 @@ AntarBhukti has been thoroughly tested on all 80 OSCAT automation benchmarks, en
 ## 📄 Publications
 
 **Antarbhukti: Verifying Correctness of PLC Software During System Evolution**  
-- International Symposium on Automated Technology for Verification and Analysis (ATVA)  
 - [ATVA 2025](https://link.springer.com/chapter/10.1007/978-3-032-08707-2_21)  
 - [arXiv Preprint](https://arxiv.org/abs/2509.05596)
 ## 📄 License
