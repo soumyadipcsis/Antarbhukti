@@ -1,0 +1,256 @@
+{
+  "title": "Petri Net Model Containment Report",
+  "cut_points": {
+    "model1": [
+      "BuildHex",
+      "CheckExit",
+      "CheckRange",
+      "CheckZero",
+      "ConvertLoop",
+      "End",
+      "Init"
+    ],
+    "model2": [
+      "BuildHex",
+      "CheckExit",
+      "CheckRange",
+      "CheckZero",
+      "ConvertLoop",
+      "End",
+      "Init"
+    ]
+  },
+  "paths": {
+    "model1": [
+      {
+        "from": "BuildHex",
+        "to": "CheckExit",
+        "transitions": [
+          "t_8"
+        ],
+        "condition": "true",
+        "data_transformation": "true"
+      },
+      {
+        "from": "CheckExit",
+        "to": "ConvertLoop",
+        "transitions": [
+          "t_11"
+        ],
+        "condition": "TempDecValue <> 0; i := i - 1",
+        "data_transformation": "true"
+      },
+      {
+        "from": "CheckRange",
+        "to": "ConvertLoop",
+        "transitions": [
+          "t_6"
+        ],
+        "condition": "(<= DecValue 9999999999)",
+        "data_transformation": "true"
+      },
+      {
+        "from": "CheckZero",
+        "to": "CheckRange",
+        "transitions": [
+          "t_3"
+        ],
+        "condition": "DecValue <> 0",
+        "data_transformation": "true"
+      },
+      {
+        "from": "ConvertLoop",
+        "to": "BuildHex",
+        "transitions": [
+          "t_7"
+        ],
+        "condition": "(>= i 0)",
+        "data_transformation": "(and (= TempHex TempDecValue mod 16) (= HexValue (+ (* HexValue 16) TempHex)) (= TempDecValue (/ TempDecValue 16)))"
+      },
+      {
+        "from": "Init",
+        "to": "CheckZero",
+        "transitions": [
+          "t_0"
+        ],
+        "condition": "init",
+        "data_transformation": "true"
+      }
+    ],
+    "model2": [
+      {
+        "from": "BuildHex",
+        "to": "CheckExit",
+        "transitions": [
+          "t_8"
+        ],
+        "condition": "1",
+        "data_transformation": "true"
+      },
+      {
+        "from": "CheckExit",
+        "to": "ConvertLoop",
+        "transitions": [
+          "t_11"
+        ],
+        "condition": "TempDecValue <> 0; i := i - 1",
+        "data_transformation": "true"
+      },
+      {
+        "from": "CheckRange",
+        "to": "ConvertLoop",
+        "transitions": [
+          "t_6"
+        ],
+        "condition": "(<= DecValue 9999999999)",
+        "data_transformation": "true"
+      },
+      {
+        "from": "CheckZero",
+        "to": "CheckRange",
+        "transitions": [
+          "t_3"
+        ],
+        "condition": "DecValue <> 0",
+        "data_transformation": "true"
+      },
+      {
+        "from": "ConvertLoop",
+        "to": "BuildHex",
+        "transitions": [
+          "t_7"
+        ],
+        "condition": "(>= i 0)",
+        "data_transformation": "(and (= TempHex TempDecValue mod 15) (= HexValue (+ (* HexValue 16) TempHex)) (= TempDecValue (/ TempDecValue 16)))"
+      },
+      {
+        "from": "Init",
+        "to": "CheckZero",
+        "transitions": [
+          "t_0"
+        ],
+        "condition": "init",
+        "data_transformation": "true"
+      }
+    ]
+  },
+  "path_mapping": {
+    "matched_paths": [
+      {
+        "model1_path": {
+          "from": "BuildHex",
+          "to": "CheckExit",
+          "transitions": [
+            "t_8"
+          ],
+          "condition": "true",
+          "data_transformation": "true"
+        },
+        "model2_path": {
+          "from": "Init",
+          "to": "CheckZero",
+          "transitions": [
+            "t_0"
+          ],
+          "condition": "init",
+          "data_transformation": "true"
+        }
+      },
+      {
+        "model1_path": {
+          "from": "CheckExit",
+          "to": "ConvertLoop",
+          "transitions": [
+            "t_11"
+          ],
+          "condition": "TempDecValue <> 0; i := i - 1",
+          "data_transformation": "true"
+        },
+        "model2_path": {
+          "from": "CheckExit",
+          "to": "ConvertLoop",
+          "transitions": [
+            "t_11"
+          ],
+          "condition": "TempDecValue <> 0; i := i - 1",
+          "data_transformation": "true"
+        }
+      },
+      {
+        "model1_path": {
+          "from": "CheckRange",
+          "to": "ConvertLoop",
+          "transitions": [
+            "t_6"
+          ],
+          "condition": "(<= DecValue 9999999999)",
+          "data_transformation": "true"
+        },
+        "model2_path": {
+          "from": "CheckRange",
+          "to": "ConvertLoop",
+          "transitions": [
+            "t_6"
+          ],
+          "condition": "(<= DecValue 9999999999)",
+          "data_transformation": "true"
+        }
+      },
+      {
+        "model1_path": {
+          "from": "CheckZero",
+          "to": "CheckRange",
+          "transitions": [
+            "t_3"
+          ],
+          "condition": "DecValue <> 0",
+          "data_transformation": "true"
+        },
+        "model2_path": {
+          "from": "CheckZero",
+          "to": "CheckRange",
+          "transitions": [
+            "t_3"
+          ],
+          "condition": "DecValue <> 0",
+          "data_transformation": "true"
+        }
+      },
+      {
+        "model1_path": {
+          "from": "Init",
+          "to": "CheckZero",
+          "transitions": [
+            "t_0"
+          ],
+          "condition": "init",
+          "data_transformation": "true"
+        },
+        "model2_path": {
+          "from": "Init",
+          "to": "CheckZero",
+          "transitions": [
+            "t_0"
+          ],
+          "condition": "init",
+          "data_transformation": "true"
+        }
+      }
+    ],
+    "unmatched_paths": [
+      {
+        "from": "ConvertLoop",
+        "to": "BuildHex",
+        "transitions": [
+          "t_7"
+        ],
+        "condition": "(>= i 0)",
+        "data_transformation": "(and (= TempHex TempDecValue mod 16) (= HexValue (+ (* HexValue 16) TempHex)) (= TempDecValue (/ TempDecValue 16)))"
+      }
+    ]
+  },
+  "containment_result": {
+    "contained": false,
+    "description": "There are paths in Model 1 that are not matched in Model 2 (Containment does NOT hold)."
+  }
+}
