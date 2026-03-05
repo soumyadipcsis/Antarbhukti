@@ -76,7 +76,16 @@ python3 driver.py dec2hex.txt dec2hex_mod.txt
 ```
 
 ---
+## Run using Docker
 
+Build the container
+
+docker build -t antarbhukti .
+
+Run verification
+docker run antarbhukti file1.txt file2.txt 
+docker run antarbhukti dec2hex.txt dec2hex_mod.txt (For example) 
+---
 ## 🏗️ OSCAT Benchmarks
 
 AntarBhukti has been thoroughly tested on all 80 OSCAT automation benchmarks, ensuring robust and reliable verification.
